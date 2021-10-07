@@ -2,7 +2,7 @@
 
 Installation - 
 
-- Run the setup.bat file or type "pip install -r requirements.txt"
+- Run the setup.bat file or type `pip install -r requirements.txt`
 
 How to run - 
 
