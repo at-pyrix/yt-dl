@@ -11,4 +11,4 @@ How to run -
 
 To Change the path:
  
- -PATH = "path\\to\\folder"
+ -PATH = `path\\to\\folder`
