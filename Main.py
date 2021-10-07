@@ -8,7 +8,7 @@ from colorama import Fore as fc
 from math import log, floor
 
 
-# i don't understand this either bro (stack overflow)
+# converts the number to K/M/B...
 def format(number):
     units = ['', 'K', 'M', 'B']
     k = 1000.0
@@ -48,7 +48,7 @@ print(fc.LIGHTYELLOW_EX+"Views: "+fc.WHITE+views+" views")
 print(f"{fc.LIGHTYELLOW_EX}Rating: {fc.WHITE}{rating}\n")
 
 # gets the desktop path
-desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
+PATH = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 
 done = False
 
@@ -68,6 +68,7 @@ t = threading.Thread(target=animate)
 t.start()
 
 try:
+    # downloading the video with the highest resolution
     video_streams = youtube.streams.get_highest_resolution()
     video_streams.download(desktop)
 except:
@@ -79,5 +80,5 @@ except:
 done = True
 print(f"{fc.LIGHTGREEN_EX}\rDownload Complete     {fc.WHITE}")
 
-print("Saved in: ", desktop)
+print("Saved in: ", PATH)
 input()
